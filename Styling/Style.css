@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.special {
+    color: orange;
+    font-weight: bold;
+  }
+  li.special {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  li em {
+    color:red;
+  }
+  ol ul { color: red; }
+  
+  a:link {
+    color: rgb(6, 108, 240);
+}
+
+a:visited {
+    color: rgb(219, 14, 14);
+}
+
+a:hover {
+    background-color: aqua;
+}
+div + div .endtag {
+    color: rgb(233, 13, 13);
+    background-color: red;
+}

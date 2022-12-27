@@ -1,0 +1,44 @@
+p::first-letter {
+    color: brown;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .firstline::first-line {
+    color: red;
+    font-size: 18px;
+  }
+  .video::backdrop {
+    background-color: goldenrod;
+  }
+  
+  .video {
+    min-width: 20rem;
+    max-width: 100%;
+  }
+
+  p:nth-of-type(2)::selection {
+    background: darkblue;
+    color: yellow;
+  }
+
+  p:nth-of-type(1)::selection {
+    background: rgb(236, 70, 4);
+    color: rgb(7, 223, 212);
+  }
+  input::placeholder {
+    color: darkcyan;
+  }
+  .hoverbackgroundcolor:hover {
+    background-color: aqua;
+  }
+  .inputvalidcheck:invalid {
+    color: red;
+  }
+  .inputvalidcheck:valid {
+    color: green;
+  }
+  .button:focus {
+        background-color: black;
+        color: aliceblue;
+  }

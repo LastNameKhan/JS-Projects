@@ -1,0 +1,207 @@
+<!DOCTYPE html> //it states which language we are using
+<html lang="en"> //it says that from here we are going to write the html code
+<head> //This is where all of the meta data goes. Stuff which is meant for the search engines and other computer programs
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> //Where content of the pages goes
+    <h1>This is heading</h1>
+    <strong>This is strong text</strong>
+    <em>This is emphasized text</em>
+    <mark>This is mark text</mark>
+    <small>This is small text</small>
+    <u>This is userline text</u>
+    <ins>This is inserted Text</ins>
+    <sub>This is sub text</sub>
+    <sup>This is superscript text</sup>
+
+    <h1>List</h1>
+    <h4>Ordered List</h4>
+    <ol>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ol>
+    <h4>UnOrdered List</h4>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+    <h4>Defination List</h4>
+    <dl>
+        <dt>Javascript</dt>
+        <dd>javascript is a programming language which was built only in 15 days</dd>
+    </dl>
+    <h4>Table in HTML</h4>
+    <table style="border: 1px solid black">
+        <th>Hello World</th>
+        <tr>
+            <td>Row 1 - Column 1</td>
+            <td>Row 1 - Column 2 </td>
+        </tr>
+        <tr>
+            <td>Row 2 - Column 1</td>
+            <td>Row 2 - Column 2</td>
+        </tr>
+    </table>
+    <h4>Complex Table</h4>
+    <table style="border: 1px solid black">
+        <caption>This is the caption tag which is added to the table</caption>
+        <thead>
+            <tr>
+                <th colspan="3">Invoice #123456789</th>
+                <th>1 Dec</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Pay to:</strong>
+                    <br>Extended WebApptech</br>
+                </td>
+            </tr>
+        </thead>
+    </table>
+    <a href="http://www.google.com" rel="license" hreflang="es" target="_blank">Google</a>
+    <h1>Forms</h1>
+    <input type="range" name="range" min="100" max="1000" step="50">
+    <input type="color" value="#b97a57">
+
+<input type="date" value="2020-06-08">
+
+<input type="datetime" value="2020-06-09T20:35:34.32">
+
+<input type="datetime-local" value="2020-06-09T22:41">
+
+<input type="email" value="robert@robertnyman.com">
+
+<input type="month" value="2020-06">
+
+<input type="number" value="4">
+
+<input type="range" value="15">
+
+<!-- Note: If not set, default attribute values are min="0", max="100", step="1". -->
+
+<input type="search" value="[Any search text]">
+
+<input type="tel" value="[Any numeric value]">
+
+<!-- Note: Most web browsers seem to let through any value at this time. -->
+
+<input type="time" value="22:38">
+
+<input type="url" value="https://www.google.com/">
+
+<!-- Note: requires a protocol like http://, ftp:// etc in the beginning. -->
+
+
+<input type="week" value="2020-W24">
+
+<h3>Data List Tag</h3>
+<p>Enter your favorite browser name:</p>
+<input type="text" list="browsers" name="favorite_browser">
+<datalist id="browsers">
+    <option value="Firefox">
+    <option value="Chrome">    
+    <option value="Internet Explorer">
+    <option value="Opera">
+    <option value="Safari">
+</datalist>
+
+<h3>Meter Tag</h3>
+<p>Disk Usage: <meter value="0.2">20%</meter></p>
+<p>Total Score: <meter value="6" min="0" max="10">6 out of 10</meter></p>
+<p>Pollution Level: <meter low="60" high="80" max="100" value="85">Very High</meter></p>
+
+<h3>Output Tag</h3>
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" id="a" value="50"> +
+    <input type="number" id="b" value="100"> =
+    <output name="result" for="a b"></output>
+  </form>
+
+  <h3>Progress Tag</h3>
+  <p>Progress: <progress id="bar" value="0" max="100"><span>0</span>%</progress></p>
+
+<h3>Form which accepts the following Things such that UserName,Email,Country,Subject</h3>
+
+
+
+<div class="container">
+    <form name="contactForm" onsubmit="return validateForm()" method="post">
+      <label for="fname">Name</label>
+      <input type="text" id="user_name" name="user_name" placeholder="Your name.." required>
+  
+      <label for="lname">Email ID</label>
+      <input type="email" id="email" name="email" placeholder="Your Email Address.." required>
+  
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="">--- SELECT ---</option>
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+
+
+
+<script type="text/javascript">
+    var i = 0;
+    var progressBar = document.getElementById("bar");
+    
+    function countNumbers() {
+      if(i < 100) {
+        i = i + 1;
+        progressBar.value = i;
+        // For browsers that don't support progress tag
+        progressBar.getElementsByTagName("span")[0].textContent = i;
+      }
+
+      // Wait for sometime before running this script again
+      setTimeout("countNumbers()", 100);
+    }
+    countNumbers();
+
+
+    function validateForm() {
+      let name = document.forms["contactForm"]["user_name"].value;
+      let email = document.forms["contactForm"]["email"].value;
+      let country = document.forms["contactForm"]["country"].value;
+      let subject = document.forms["contactForm"]["subject"].value;
+
+      if (name === "" || email === "" || country === "") {
+        alert("All the fields are mandatory");
+        return false;
+      } else { 
+        // Create a JSON Object
+        const userData = {
+          name: name,
+          email: email,
+          country: country,
+          subject: subject
+        };
+
+        // Store the object into storage
+        localStorage.setItem("userData", JSON.stringify(userData));
+
+        // Retrieve the object from the storage
+        const data = localStorage.getItem("userData");
+        console.log("data: ", JSON.parse(data));
+        
+        return false;
+      }
+    }
+</script>
+</body>
+</html>

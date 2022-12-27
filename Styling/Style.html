@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <p>Here we can give classname to the element whose style we need to change.</p>
+        <li><em>Aman Item one</em></li>
+        <li class="special">Item two</li>
+        <li>Item <em>three</em></li>
+    </ul>
+    <h2>Selectors :- <ol><li>General sibling selector (~)</li>
+        <li>Adjacent sibling selector (+)</li>
+        <li>Child selector (>)</li>
+        <li>Descendant selector (space)</li>
+    </ol>
+    </h2>
+    <h3>1. Descendant combinator</h3>
+    <h4>element1 element2 { style_properties }</h4>
+    <p>Example :- </p>
+    <ol>
+        <li>TechOnTheNet.com</li>
+        <ul>
+            <li>Oracle/PLSQL</li>
+            <li>SQL</li>
+            <li>Excel</li>
+        </ul>
+        <li>CheckYourMath.com</li>
+        <li>BigActivities.com</li>
+    </ol>
+    <p>-------------------------------------------------------------------------------------------------------</p>
+    <h3>2. Adjacent sibling combinator</h3>
+    <h1>I am a level one heading</h1>
+    <p>This is a paragraph of text. In the text is a
+        <span>span element</span> 
+        and also a <a href="http://google.com">link</a>.</p>
+        <p>This is the second paragraph. It contains an
+            <em>emphasized</em>
+            element.
+        </p>
+        <ul>
+            <li>Item <span>one</span></li>
+            <li>Item two</li>
+            <li>Item <em>three</em></li>
+        </ul>
+        <p>-------------------------------------------------------------------------------------------------------</p>
+        <h3>Styling things based on state</h3>
+        <p>When we style a link, we need to target the anchor element.This as different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated).You can use CSS to target thes different states.</p>
+        <p>This is a paragraph of text. In the text is a <span>span element</span> 
+            and also a <a href="http://google.com">link</a></p>
+
+    <h3>3. Combining selectors and Combinators</h3>
+    <div class="firstdiv">
+        <div><p class="endtag">Combining Selectors and Combinators</p></div>
+        <div><p>Combining Selectors and Combinators</p></div>
+        <div><p>Combining Selectors and Combinators</p></div>
+    </div>
+</body>
+</html>

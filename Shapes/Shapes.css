@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: black;
+  }
+  
+  .container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+  }
+  .hexagon {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: black;
+    margin: 1px;
+    clip-path: circle(50%);
+    /* clip-path: polygon(50% 0, 42% 46%, 95% 26%); */
+    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+    transition: 2s;
+  }
+  
+  .hexagon:hover {
+    transition: 0s;
+    background: rgb(247, 0, 255);
+  }
+  
+  .hexagon:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(238, 9, 9, 0.02);
+  }
+  
+  .row {
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+  }
+  
+  @keyframes animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
